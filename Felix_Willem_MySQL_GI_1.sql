@@ -1,3 +1,5 @@
+-- Felix WIllem GI SQL Week 14
+
 -- Select all data from the dataset.
 
 SHOW DATABASES;
