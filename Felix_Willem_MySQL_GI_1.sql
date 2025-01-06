@@ -1,10 +1,9 @@
 -- Felix WIllem GI SQL Week 14
 
--- Select all data from the dataset.
+-- SELECT all data from the dataset.
 
-SHOW DATABASES;
 USE sunshine;
-select *
+SELECT *
 FROM sunshine3;
 
 -- City names that had exactly 314 hours of sunshine in June.
@@ -16,33 +15,33 @@ WHERE Jun = 314;
 
 -- Country and City names that had exactly 314 hours of sunshine in June.
 
-select country, city 
+SELECT country, city 
 FROM sunshine3
 
 WHERE jun = 314;
 
 -- A list of all countries in the dataset.
 
-select country
+SELECT country
 FROM sunshine3
 
 -- All information in the table for cities starting with “Ch”
 
-select *
+SELECT *
 FROM sunshine3
 
 WHERE city LIKE 'ch%';
 
 -- Cities that received a total amount of sunshine greater than 3,000 hours.
 
-select city
+SELECT city
 FROM sunshine3
 
 WHERE year > 3000;
 
 -- Cities that received a total amount of sunshine greater than 3,000 hours that are also in the United States.
 
-select city
+SELECT city
 FROM sunshine3
 
 WHERE year > 3000
@@ -51,29 +50,29 @@ AND country = 'United States';
 
 -- All information in the dataset where Country has no null values.
 
-select city
+SELECT city
 FROM sunshine3
 
 WHERE year > 3000
 AND country IS NOT NULL;
 
--- Select all data for Charlotte, Raleigh, and Atlanta.
+-- SELECT all data for Charlotte, Raleigh, and Atlanta.
 
-select *
+SELECT *
 FROM sunshine3
 
 WHERE city IN('Charlotte', 'Raleigh', 'Atlanta');
 
 -- The city and country for each location that receives between 5 and 20 hours of sunshine in January.
 
-select city, country
+SELECT city, country
 FROM sunshine3
 
 WHERE Jan BETWEEN 5 AND 20;
 
 -- The city and country for each location that receives between 5 and 20 hours of sunshine in January and over 300 hours of sunshine in June.
 
-select city, country
+SELECT city, country
 FROM sunshine3
 
 WHERE Jan BETWEEN 5 AND 20
@@ -81,7 +80,7 @@ AND Jun > 300;
 
 -- All cities in the dataset that are in the United States excluding Charlotte.
 
-select city
+SELECT city
 FROM sunshine3
 
 WHERE country = 'United States'
@@ -89,7 +88,7 @@ AND city <> 'Charlotte';
 
 -- All cities in the dataset that are in the United States excluding Charlotte, Boston, and Las Vegas.
 
-select city
+SELECT city
 FROM sunshine3
 
 WHERE country = 'United States'
@@ -97,7 +96,7 @@ AND city NOT IN ('Charlotte', 'Boston', 'Las Vegas');
 
 -- All information in the dataset for cities that have exactly 225 hours of sunshine in September or have at least 200 hours of sunshine in January.
 
-select *
+SELECT *
 FROM sunshine3
 
 WHERE Sep= 225
@@ -105,14 +104,14 @@ AND Jan > 200;
 
 -- All information in the dataset for cities in the United States that have exactly 225 hours of sunshine in September or have at least 200 hours of sunshine in January.
 
-select *
+SELECT *
 FROM sunshine3
 
 WHERE country = 'United States'
 AND (Sep = 225 OR Jan > 200);
 
 
--- Aggregate Select Problems
+-- Aggregate SELECT Problems
 
 -- How many rows are in the data set?
 
